@@ -21,10 +21,10 @@ class _HomePageState extends State<HomePage> {
 
     if (_search == null || _search.isEmpty)
       response = await http.get(
-          "https://api.giphy.com/v1/gifs/trending?api_key=VIDIXLZkf3CAXferkAKwKjVymqGkUxr3&limit=30&rating=G");
+          "https://api.giphy.com/v1/gifs/trending?api_key=YOURAPIKEY&limit=30&rating=G");
     else
       response = await http.get(
-          "https://api.giphy.com/v1/gifs/search?api_key=VIDIXLZkf3CAXferkAKwKjVymqGkUxr3&q=$_search&limit=29&offset=$_offset&rating=G&lang=pt");
+          "https://api.giphy.com/v1/gifs/search?api_key=YOURAPIKEY&q=$_search&limit=29&offset=$_offset&rating=G&lang=pt");
 
     return json.decode(response.body);
   }
